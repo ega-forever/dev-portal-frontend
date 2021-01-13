@@ -1,0 +1,124 @@
+extends ./components/layout
+
+block content
+  main
+    header.page-header.page-header-dark.bg-gradient-primary-to-secondary.pb-10
+      .container
+        .page-header-content.pt-4
+          .row.align-items-center.justify-content-between
+            .col-auto.mt-4
+              h1.page-header-title
+                .page-header-icon
+                  i(data-feather='arrow-right-circle')
+                | Template component
+              .page-header-subtitle
+                | Step by step template import
+    // Main page content
+    .container.mt-n10
+      // Wizard card example with navigation
+      .card
+        .card-header.border-bottom
+          // Wizard navigation
+          #cardTab.nav.nav-pills.nav-justified.flex-column.flex-xl-row.nav-wizard(role='tablist')
+            // Wizard navigation item 1
+            a#wizard1-tab.nav-item.nav-link.active(href='#wizard1' data-toggle='tab' role='tab' aria-controls='wizard1' aria-selected='true')
+              .wizard-step-icon 1
+              .wizard-step-text
+                .wizard-step-text-name Step 1
+                .wizard-step-text-details Project name and namespace
+            // Wizard navigation item 2
+            a#wizard2-tab.nav-item.nav-link(href='#wizard2' data-toggle='tab' role='tab' aria-controls='wizard2' aria-selected='true')
+              .wizard-step-icon 2
+              .wizard-step-text
+                .wizard-step-text-name Step 2
+                .wizard-step-text-details Permissions
+            // Wizard navigation item 3
+            a#wizard4-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
+              .wizard-step-icon 3
+              .wizard-step-text
+                .wizard-step-text-name Step 3
+                .wizard-step-text-details Tags and description
+        .card-body
+          #cardTabContent.tab-content
+            // Wizard tab pane item 1
+            #wizard1.tab-pane.py-5.py-xl-10.fade.show.active(role='tabpanel' aria-labelledby='wizard1-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 1
+                  h5.card-title Enter Template information
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputComponentName') Template name
+                      input#inputComponentName.form-control(type='text' placeholder='Enter your template name' value='my template')
+                    .form-group
+                      label.small.mb-1(for='inputRepoUrl') Repository url
+                      input#inputRepoUrl.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo')
+                    .form-group
+                      label.small.mb-1(for='inputStreamId') Stream
+                      .input-group.input-group-joined
+                        .input-group-prepend
+                          span.input-group-text
+                            i(data-feather='search')
+                        input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search')
+                    .form-group
+                      label.small.mb-1(for='inputProjectId') Project
+                      .input-group.input-group-joined
+                        .input-group-prepend
+                          span.input-group-text
+                            i(data-feather='search')
+                        input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search')
+                    hr.my-4
+                    .d-flex.justify-content-between
+                      button.btn.btn-light.disabled(type='button' disabled='') Previous
+                      button.btn.btn-primary(type='button') Next
+            // Wizard tab pane item 2
+            #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 2
+                  h5.card-title Edit permissions
+                  form
+
+                    .form-group
+                      label.small.mb-1(for='inputUserIds') User
+                      .input-group.input-group-joined
+                        .input-group-prepend
+                          span.input-group-text
+                            i(data-feather='search')
+                        input#inputUserIds.form-control(type='text', placeholder='search user by name...', aria-label='Search')
+                    .form-group
+                      button.btn.btn-primary.mr-2 Adam Smith
+                        span.badge.badge-white.ml-2 x
+                      button.btn.btn-primary.mr-2 Peter Griffin
+                        span.badge.badge-white.ml-2 x
+
+                    hr.my-4
+                    .d-flex.justify-content-between
+                      button.btn.btn-light(type='button') Previous
+                      button.btn.btn-primary(type='button') Next
+            // Wizard tab pane item 4
+            #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 3
+                  h5.card-title Tags and description
+                  form
+                    .form-group
+                      label(for='inputComponentDescription') Description
+                      textarea#inputComponentDescription.form-control(rows='3')
+                    .form-group
+                      .input-group.mb-3
+                        input.form-control(type='text' placeholder="Tag")
+                        .input-group-append
+                          button#button-addon2.btn.btn-secondary(type='button') Add
+
+                    .form-group
+                      button.btn.btn-secondary.mr-2 Java-spring
+                        span.badge.badge-white.ml-2 x
+                      button.btn.btn-secondary.mr-2 Java
+                        span.badge.badge-white.ml-2 x
+
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Submit

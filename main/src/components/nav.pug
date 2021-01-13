@@ -9,24 +9,30 @@ nav.sidenav.shadow-right.sidenav-light
           i(data-feather='bar-chart')
         | View
 
-      a.nav-link.collapsed(href='javascript:void(0);' data-toggle='collapse' data-target='#collapseDashboards' aria-expanded='false' aria-controls='collapseDashboards')
+      a.nav-link.collapsed(href='javascript:void(0);' data-toggle='collapse' data-target='#collapseComponentCreate' aria-expanded='false' aria-controls='collapseDashboards')
         .nav-link-icon
           i(data-feather='activity')
         | Create
         .sidenav-collapse-arrow
           i.fas.fa-angle-down
-      #collapseDashboards.collapse(data-parent='#accordionSidenav')
-        nav#accordionSidenavPages.sidenav-menu-nested.nav.accordion
+      #collapseComponentCreate.collapse(data-parent='#accordionSidenav')
+        nav.sidenav-menu-nested.nav.accordion
           a.nav-link(href='components-create-service.html') Service
           a.nav-link(href='components-create-library.html') Library
           a.nav-link(href='components-create-template.html') Template
 
 
-      // Sidenav Link (Tables)
-      a.nav-link(href='tables.html')
+      a.nav-link.collapsed(href='javascript:void(0);' data-toggle='collapse' data-target='#collapseComponentImport' aria-expanded='false' aria-controls='collapseDashboards')
         .nav-link-icon
-          i(data-feather='filter')
+          i(data-feather='activity')
         | Import
+        .sidenav-collapse-arrow
+          i.fas.fa-angle-down
+      #collapseComponentImport.collapse(data-parent='#accordionSidenav')
+        nav.sidenav-menu-nested.nav.accordion
+          a.nav-link(href='components-import-service.html') Service
+          a.nav-link(href='components-import-library.html') Library
+          a.nav-link(href='components-import-template.html') Template
   // Sidenav Footer
   .sidenav-footer
     .sidenav-footer-content
