@@ -1,0 +1,73 @@
+extends ./components/layout
+
+block content
+  main
+    header.page-header.page-header-dark.bg-gradient-primary-to-secondary.pb-10
+      .container
+        .page-header-content.pt-4
+          .row.align-items-center.justify-content-between
+            .col-auto.mt-4
+              h1.page-header-title
+                | Components catalog
+    // Main page content
+    .container.mt-n10
+      .card.card-header-actions.mb-4
+        .card-header
+          span
+          div
+            .button.btn.btn-primary.mr-2.my-1(type="button") Create
+            .button.btn.btn-primary.mr-2.my-1(type="button") Import
+        .card-body
+          .datatable
+            table#dataTable.table.table-bordered.table-hover(width='100%' cellspacing='0')
+              thead
+                tr
+                  th Name
+                  th Stream
+                  th Project
+                  th Type
+                  th Version
+                  th Tags
+                  th Maintainer
+                  th Actions
+              tfoot
+                tr
+                  th Name
+                  th Stream
+                  th Project
+                  th Type
+                  th Version
+                  th Tags
+                  th Maintainer
+                  th Actions
+              tbody
+                tr
+                  td Auth service
+                  td Core
+                  td Basic auth
+                  td Service
+                  td 0.1.0
+                  td
+                    .badge.badge-primary.badge-pill core
+                    .badge.badge-primary.badge-pill auth
+                  td Egor Zuev
+                  td
+                    button.btn.btn-datatable.btn-icon.btn-transparent-dark.mr-2
+                      i(data-feather='more-vertical')
+                    button.btn.btn-datatable.btn-icon.btn-transparent-dark
+                      i(data-feather='trash-2')
+                tr
+                  td Lombok
+                  td Support
+                  td Core
+                  td Library
+                  td 0.0.1
+                  td
+                    .badge.badge-primary.badge-pill core
+                    .badge.badge-primary.badge-pill auth
+                  td Egor Zuev
+                  td
+                    button.btn.btn-datatable.btn-icon.btn-transparent-dark.mr-2
+                      i(data-feather='more-vertical')
+                    button.btn.btn-datatable.btn-icon.btn-transparent-dark
+                      i(data-feather='trash-2')

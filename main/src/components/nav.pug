@@ -1,0 +1,34 @@
+nav.sidenav.shadow-right.sidenav-light
+  .sidenav-menu
+    #accordionSidenav.nav.accordion
+      .sidenav-menu-heading Components
+      // Sidenav Link (Charts)
+
+      a.nav-link(href='index.html')
+        .nav-link-icon
+          i(data-feather='bar-chart')
+        | View
+
+      a.nav-link.collapsed(href='javascript:void(0);' data-toggle='collapse' data-target='#collapseDashboards' aria-expanded='false' aria-controls='collapseDashboards')
+        .nav-link-icon
+          i(data-feather='activity')
+        | Create
+        .sidenav-collapse-arrow
+          i.fas.fa-angle-down
+      #collapseDashboards.collapse(data-parent='#accordionSidenav')
+        nav#accordionSidenavPages.sidenav-menu-nested.nav.accordion
+          a.nav-link(href='components-create-service.html') Service
+          a.nav-link(href='dashboard-2.html') Multipurpose
+          a.nav-link(href='dashboard-3.html') Affiliate
+
+
+      // Sidenav Link (Tables)
+      a.nav-link(href='tables.html')
+        .nav-link-icon
+          i(data-feather='filter')
+        | Import
+  // Sidenav Footer
+  .sidenav-footer
+    .sidenav-footer-content
+      .sidenav-footer-subtitle Logged in as:
+      .sidenav-footer-title User
