@@ -10,9 +10,9 @@ block content
               h1.page-header-title
                 .page-header-icon
                   i(data-feather='arrow-right-circle')
-                | Service component
+                | Library component
               .page-header-subtitle
-                | Step by step service creation
+                | Step by step library creation
     // Main page content
     .container.mt-n10
       // Wizard card example with navigation
@@ -31,23 +31,16 @@ block content
               .wizard-step-icon 2
               .wizard-step-text
                 .wizard-step-text-name Step 2
-                .wizard-step-text-details Resources
-            // Wizard navigation item 3
+                .wizard-step-text-details Permissions
             a#wizard3-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
               .wizard-step-icon 3
               .wizard-step-text
                 .wizard-step-text-name Step 3
-                .wizard-step-text-details Permissions
-            // Wizard navigation item 4
+                .wizard-step-text-details Cross dependencies
             a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
               .wizard-step-icon 4
               .wizard-step-text
                 .wizard-step-text-name Step 4
-                .wizard-step-text-details Cross dependencies
-            a#wizard5-tab.nav-item.nav-link(href='#wizard5' data-toggle='tab' role='tab' aria-controls='wizard5' aria-selected='true')
-              .wizard-step-icon 5
-              .wizard-step-text
-                .wizard-step-text-name Step 5
                 .wizard-step-text-details Tags and description
         .card-body
           #cardTabContent.tab-content
@@ -56,14 +49,14 @@ block content
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
-                  h5.card-title Enter Service information
+                  h5.card-title Enter Library information
                   form
                     .form-group
-                      label.small.mb-1(for='inputComponentName') Service name
-                      input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service')
+                      label.small.mb-1(for='inputLibraryName') Library name
+                      input#inputLibraryName.form-control(type='text' placeholder='Enter your library name' value='my lib')
                     .form-group
                       label.small.mb-1(for='inputRepoName') Repository name
-                      input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-service')
+                      input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-lib')
                     .form-group
                       label.small.mb-1(for='inputScaffoldId') Scaffold template
                       .input-group.input-group-joined
@@ -89,34 +82,14 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light.disabled(type='button' disabled='') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 2
-            #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
+            // Wizard tab pane item 3
+            #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
-                  h5.card-title Resources for service
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu)
-                      input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128')
-                    .form-group
-                      label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
-                      input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128')
-                    .form-group
-                      label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
-                      input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128')
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light(type='button') Previous
-                      button.btn.btn-primary(type='button') Next
-
-            // Wizard tab pane item 3
-            #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 3
                   h5.card-title Edit permissions
                   form
+
                     .form-group
                       label.small.mb-1(for='inputUserIds') User
                       .input-group.input-group-joined
@@ -134,11 +107,11 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light(type='button') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 4
-            #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
+            // Wizard tab pane item 3
+            #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
-                  h3.text-primary Step 4
+                  h3.text-primary Step 3
                   h5.card-title Cross dependencies
                   form
                     .form-group
@@ -150,7 +123,7 @@ block content
                         input#inputCrossComponentDepId.form-control(type='text', placeholder='search component by name...', aria-label='Search')
 
                     .form-group
-                      button.btn.btn-secondary.mr-2 Java-spring-service#v1.0
+                      button.btn.btn-secondary.mr-2 jdbc#v1.0
                         span.badge.badge-white.ml-2 x
                       button.btn.btn-secondary.mr-2 Lombok#v2.0
                         span.badge.badge-white.ml-2 x
@@ -160,10 +133,11 @@ block content
                     button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
 
-            #wizard5.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard5-tab')
+
+            #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
-                  h3.text-primary Step 5
+                  h3.text-primary Step 4
                   h5.card-title Tags and description
                   form
                     .form-group
@@ -176,9 +150,9 @@ block content
                           button#button-addon2.btn.btn-secondary(type='button') Add
 
                     .form-group
-                      button.btn.btn-secondary.mr-2 Spring
+                      button.btn.btn-secondary.mr-2 lombok
                         span.badge.badge-white.ml-2 x
-                      button.btn.btn-secondary.mr-2 Java
+                      button.btn.btn-secondary.mr-2 Java-core
                         span.badge.badge-white.ml-2 x
 
                   hr.my-4
