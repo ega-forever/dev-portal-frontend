@@ -7,42 +7,8 @@ nav#sidenavAccordion.topnav.navbar.navbar-expand.shadow.justify-content-between.
   // Sidenav Toggle Button
   button#sidebarToggle.btn.btn-icon.btn-transparent-dark.order-1.order-lg-0.mr-lg-2
     i(data-feather='menu')
-  // Navbar Search Input
-  // * * Note: * * Visible only on and above the md breakpoint
-  form.form-inline.mr-auto.d-none.d-md-block.mr-3
-    .input-group.input-group-joined.input-group-solid
-      input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
-      .input-group-append
-        .input-group-text
-          i(data-feather='search')
   // Navbar Items
   ul.navbar-nav.align-items-center.ml-auto
-    // Documentation Dropdown
-    li.nav-item.dropdown.no-caret.d-none.d-sm-block.mr-3
-      a#navbarDropdownDocs.nav-link.dropdown-toggle(href='javascript:void(0);' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-        .font-weight-500 Documentation
-        i.fas.fa-chevron-right.dropdown-arrow
-      .dropdown-menu.dropdown-menu-right.py-0.mr-sm-n15.mr-lg-0.o-hidden.animated--fade-in-up(aria-labelledby='navbarDropdownDocs')
-        a.dropdown-item.py-3(href='https://docs.startbootstrap.com/sb-admin-pro' target='_blank')
-          .icon-stack.bg-primary-soft.text-primary.mr-4
-            i(data-feather='book')
-          div
-            .small.text-gray-500 Documentation
-            |                                 Usage instructions and reference
-        .dropdown-divider.m-0
-        a.dropdown-item.py-3(href='https://docs.startbootstrap.com/sb-admin-pro/components' target='_blank')
-          .icon-stack.bg-primary-soft.text-primary.mr-4
-            i(data-feather='code')
-          div
-            .small.text-gray-500 Components
-            |                                 Code snippets and reference
-        .dropdown-divider.m-0
-        a.dropdown-item.py-3(href='https://docs.startbootstrap.com/sb-admin-pro/changelog' target='_blank')
-          .icon-stack.bg-primary-soft.text-primary.mr-4
-            i(data-feather='file-text')
-          div
-            .small.text-gray-500 Changelog
-            |                                 Updates and changes
     // Navbar Search Dropdown
     // * * Note: * * Visible only below the md breakpoint
     li.nav-item.dropdown.no-caret.mr-3.d-md-none
@@ -57,43 +23,6 @@ nav#sidenavAccordion.topnav.navbar.navbar-expand.shadow.justify-content-between.
               .input-group-text
                 i(data-feather='search')
     // Alerts Dropdown
-    li.nav-item.dropdown.no-caret.d-none.d-sm-block.mr-3.dropdown-notifications
-      a#navbarDropdownAlerts.btn.btn-icon.btn-transparent-dark.dropdown-toggle(href='javascript:void(0);' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-        i(data-feather='bell')
-      .dropdown-menu.dropdown-menu-right.border-0.shadow.animated--fade-in-up(aria-labelledby='navbarDropdownAlerts')
-        h6.dropdown-header.dropdown-notifications-header
-          i.mr-2(data-feather='bell')
-          |                             Alerts Center
-        // Example Alert 1
-        a.dropdown-item.dropdown-notifications-item(href='#!')
-          .dropdown-notifications-item-icon.bg-warning
-            i(data-feather='activity')
-          .dropdown-notifications-item-content
-            .dropdown-notifications-item-content-details December 29, 2020
-            .dropdown-notifications-item-content-text This is an alert message. It&apos;s nothing serious, but it requires your attention.
-        // Example Alert 2
-        a.dropdown-item.dropdown-notifications-item(href='#!')
-          .dropdown-notifications-item-icon.bg-info
-            i(data-feather='bar-chart')
-          .dropdown-notifications-item-content
-            .dropdown-notifications-item-content-details December 22, 2020
-            .dropdown-notifications-item-content-text A new monthly report is ready. Click here to view!
-        // Example Alert 3
-        a.dropdown-item.dropdown-notifications-item(href='#!')
-          .dropdown-notifications-item-icon.bg-danger
-            i.fas.fa-exclamation-triangle
-          .dropdown-notifications-item-content
-            .dropdown-notifications-item-content-details December 8, 2020
-            .dropdown-notifications-item-content-text Critical system failure, systems shutting down.
-        // Example Alert 4
-        a.dropdown-item.dropdown-notifications-item(href='#!')
-          .dropdown-notifications-item-icon.bg-success
-            i(data-feather='user-plus')
-          .dropdown-notifications-item-content
-            .dropdown-notifications-item-content-details December 2, 2020
-            .dropdown-notifications-item-content-text New user request. Woody has requested access to the organization.
-        a.dropdown-item.dropdown-notifications-footer(href='#!') View All Alerts
-    // Messages Dropdown
     li.nav-item.dropdown.no-caret.d-none.d-sm-block.mr-3.dropdown-notifications
       a#navbarDropdownMessages.btn.btn-icon.btn-transparent-dark.dropdown-toggle(href='javascript:void(0);' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
         i(data-feather='mail')

@@ -12,11 +12,6 @@ block content
     // Main page content
     .container.mt-n10
       .card.card-header-actions.mb-4
-        .card-header
-          span
-          div
-            .button.btn.btn-primary.mr-2.my-1(type="button") Create
-            .button.btn.btn-primary.mr-2.my-1(type="button") Import
         .card-body
           .datatable
             table#dataTable.table.table-bordered.table-hover(width='100%' cellspacing='0')
@@ -29,7 +24,6 @@ block content
                   th Version
                   th Tags
                   th Maintainer
-                  th Actions
               tfoot
                 tr
                   th Name
@@ -39,10 +33,10 @@ block content
                   th Version
                   th Tags
                   th Maintainer
-                  th Actions
               tbody
                 tr
-                  td Auth service
+                  td
+                    a(href="components-description-service.html") Auth service
                   td Core
                   td Basic auth
                   td Service
@@ -50,24 +44,28 @@ block content
                   td
                     .badge.badge-primary.badge-pill core
                     .badge.badge-primary.badge-pill auth
-                  td Egor Zuev
-                  td
-                    button.btn.btn-datatable.btn-icon.btn-transparent-dark.mr-2
-                      i(data-feather='more-vertical')
-                    button.btn.btn-datatable.btn-icon.btn-transparent-dark
-                      i(data-feather='trash-2')
+                  td Adam Smith
+
                 tr
-                  td Lombok
+                  td
+                    a(href="components-description-library.html") Lombok
                   td Support
                   td Core
                   td Library
                   td 0.0.1
                   td
                     .badge.badge-primary.badge-pill core
-                    .badge.badge-primary.badge-pill auth
-                  td Egor Zuev
+                    .badge.badge-primary.badge-pill lib
+                  td Peter Griffin
+
+                tr
                   td
-                    button.btn.btn-datatable.btn-icon.btn-transparent-dark.mr-2
-                      i(data-feather='more-vertical')
-                    button.btn.btn-datatable.btn-icon.btn-transparent-dark
-                      i(data-feather='trash-2')
+                    a(href="components-description-template.html") Java-sprint-rest-api
+                  td Billing
+                  td Core
+                  td Template
+                  td 0.1.1
+                  td
+                    .badge.badge-primary.badge-pill core
+                    .badge.badge-primary.badge-pill billing
+                  td Homer Simpson

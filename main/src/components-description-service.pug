@@ -1,0 +1,91 @@
+extends ./components/layout
+
+block content
+  main
+    header.page-header.page-header-compact.page-header-light.border-bottom.bg-white.mb-4
+      .container-fluid
+        .page-header-content
+          .row.align-items-center.justify-content-between.pt-3
+            .col-auto.mb-3
+              h1.page-header-title
+                .page-header-icon
+                  i(data-feather='info')
+                | Service info
+    // Main page content
+    .container.mt-4
+      // Account page navigation
+      nav.nav.nav-borders
+        a.nav-link.active.ml-0(href='components-description-service.html') Info
+        a.nav-link(href='components-description-service-library-analyzer.html') Library Analyzer
+        a.nav-link(href='components-description-service-CI.html') CI
+        a.nav-link(href='account-notifications.html') Trail
+      hr.mt-0.mb-4
+      .row
+        .col-xl-4
+          // Profile picture card
+          .card
+            .card-header-actions
+              .card-header
+                | Service description
+                a(href="#")
+                  i(data-feather='edit')
+
+            .card-body.text-center
+              H2 Auth service
+              p service description in README.md
+
+        .col-xl-8
+          // Account details card
+          .card.mb-4
+            .card-header Service details
+            .card-body
+              form
+                .form-group
+                  label.small.mb-1 Service name
+                  input.form-control(type='text' value='my service' disabled=true)
+                .form-group
+                  label.small.mb-1 Repository url
+                  input.form-control(type='text' value='git://my_repo' disabled=true)
+
+                .form-group
+                  label.small.mb-1 Stream
+                  input.form-control(type='text' value='core stream' disabled=true)
+                .form-group
+                  label.small.mb-1 Project
+                  input.form-control(type='text' value="billing project" disabled=true)
+
+                hr.my-4
+                h5 Resources
+                .form-group
+                  label.small.mb-1 CPU amount (vCpu)
+                  input.form-control(type='number' value='128' disabled=true)
+                .form-group
+                  label.small.mb-1 Memory amount (mb)
+                  input.form-control(type='number' value='128' disabled=true)
+                .form-group
+                  label.small.mb-1 Disk amount (mb)
+                  input.form-control(type='number' value='128' disabled=true)
+
+
+                hr.my-4
+                h5 Edit Permissions
+                .form-group
+                  button.btn.btn-primary.mr-2 Adam Smith
+                  button.btn.btn-primary.mr-2 Peter Griffin
+
+                hr.my-4
+                h5 Cross dependencies
+                .form-group
+                  button.btn.btn-secondary.mr-2 Java-spring-service#v1.0
+                  button.btn.btn-secondary.mr-2 Lombok#v2.0
+
+                hr.my-4
+                h5 Tags
+                .form-group
+                  button.btn.btn-secondary.mr-2 Spring
+                  button.btn.btn-secondary.mr-2 Java
+
+                hr.my-4
+                .d-flex.justify-content-between
+                  a.btn.btn-primary(href='components-update-service.html') Update info
+                  button.btn.btn-danger(type='button') Unregister service
