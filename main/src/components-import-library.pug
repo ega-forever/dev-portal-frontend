@@ -42,9 +42,13 @@ block content
               .wizard-step-text
                 .wizard-step-text-name Step 4
                 .wizard-step-text-details Tags and description
+            a#wizard5-tab.nav-item.nav-link(href='#wizard5' data-toggle='tab' role='tab' aria-controls='wizard5' aria-selected='true')
+              .wizard-step-icon 5
+              .wizard-step-text
+                .wizard-step-text-name Step 5
+                .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
-            // Wizard tab pane item 1
             #wizard1.tab-pane.py-5.py-xl-10.fade.show.active(role='tabpanel' aria-labelledby='wizard1-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -82,7 +86,6 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light.disabled(type='button' disabled='') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 3
             #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -106,7 +109,6 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light(type='button') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 3
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -153,6 +155,80 @@ block content
                         span.badge.badge-white.ml-2 x
                       button.btn.btn-secondary.mr-2 Java-core
                         span.badge.badge-white.ml-2 x
+
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
+            #wizard5.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard5-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 1
+                  h5.card-title Library information
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputLibraryName') Library name
+                      input.form-control(type='text' placeholder='Enter your library name' value='my lib' disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputRepoUrl') Repository url
+                      input.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my-lib', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputScaffoldId') Scaffold template
+                      input.form-control(type='text', placeholder='search template by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputStreamId') Stream
+                      input.form-control(type='text', placeholder='search stream by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputProjectId') Project
+                      input.form-control(type='text', placeholder='search project by name...', aria-label='Search', disabled=true)
+
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 2
+                  h5.card-title Permissions
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputUserIds') User
+                      input.form-control(type='text', placeholder='search user by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      button.btn.btn-primary.mr-2 Adam Smith
+                      button.btn.btn-primary.mr-2 Peter Griffin
+
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 3
+                  h5.card-title Cross dependencies
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputCrossComponentDepId') Cross dependency
+                      input.form-control(type='text', placeholder='search component by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      button.btn.btn-secondary.mr-2 jdbc#v1.0
+                      button.btn.btn-secondary.mr-2 Lombok#v2.0
+
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 4
+                  h5.card-title Tags and description
+                  form
+                    .form-group
+                      label(for='inputComponentDescription') Description
+                      textarea.form-control(rows='3', disabled=true)
+                    .form-group
+                      button.btn.btn-secondary.mr-2 lombok
+                      button.btn.btn-secondary.mr-2 Java-core
+
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 5
+                  h5.card-title Summary
+                  form
+                    .form-group
+                      label(for='inputComponentDescription') Description
+                      textarea.form-control(rows='3', disabled=true)
+                    .form-group
+                      button.btn.btn-secondary.mr-2 lombok
+                      button.btn.btn-secondary.mr-2 Java-core
 
                   hr.my-4
                   .d-flex.justify-content-between
