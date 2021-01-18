@@ -18,8 +18,17 @@ block content
         a.nav-link(href='components-description-service.html') Info
         a.nav-link.active.ml-0(href='components-description-service-library-analyzer.html') Library Analyzer
         a.nav-link(href='components-description-service-CI.html') CI
-        a.nav-link(href='account-notifications.html') Trail
+        a.nav-link(href='components-description-service-trail.html') Trail
       hr.mt-0.mb-4
+      .row
+        .col-xl-4
+          .input-group.input-group-joined
+            .input-group-prepend
+              span.input-group-text
+                i(data-feather='search')
+            input#inputScaffoldId.form-control(type='text', placeholder='search service by version...', aria-label='Search', value="v1.0.0")
+      div.mt-0.mb-4
+
       .row
         .col-xl-4
           // Profile picture card

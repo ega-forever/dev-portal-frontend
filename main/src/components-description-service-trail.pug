@@ -1,0 +1,55 @@
+extends ./components/layout
+
+block content
+  main
+    header.page-header.page-header-compact.page-header-light.border-bottom.bg-white.mb-4
+      .container-fluid
+        .page-header-content
+          .row.align-items-center.justify-content-between.pt-3
+            .col-auto.mb-3
+              h1.page-header-title
+                .page-header-icon
+                  i(data-feather='info')
+                | Service info
+    // Main page content
+    .container.mt-4
+      // Account page navigation
+      nav.nav.nav-borders
+        a.nav-link(href='components-description-service.html') Info
+        a.nav-link(href='components-description-service-library-analyzer.html') Library Analyzer
+        a.nav-link(href='components-description-service-CI.html') CI
+        a.nav-link.active.ml-0(href='components-description-service-trail.html') Trail
+      hr.mt-0.mb-4
+      .row
+        .card.mb-4
+          .card-header Trail logs
+          .card-body
+            .datatable
+              table#dataTable.table.table-bordered.table-hover(width='100%' cellspacing='0')
+                thead
+                  tr
+                    th Log type
+                    th message
+                    th triggered by
+                    th triggered at
+                tbody
+                  tr
+                    td trace
+                    td repo created in GIT
+                    td system
+                    td 14.01.2020 9:50
+                  tr
+                    td info
+                    td repo created by user
+                    td Peter Griffin
+                    td 14.01.2020 9:46
+                  tr
+                    td trace
+                    td meta information updated
+                    td system
+                    td 14.01.2020 10:12
+                  tr
+                    td info
+                    td meta information updated
+                    td Peter Griffin updated meta
+                    td 14.01.2020 10:08

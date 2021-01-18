@@ -18,122 +18,75 @@ block content
         a.nav-link(href='components-description-service.html') Info
         a.nav-link(href='components-description-service-library-analyzer.html') Library Analyzer
         a.nav-link.active.ml-0(href='components-description-service-CI.html') CI
-        a.nav-link(href='account-notifications.html') Trail
+        a.nav-link(href='components-description-service-trail.html') Trail
       hr.mt-0.mb-4
+
       .row
         .col-xl-4
-          // Profile picture card
-          .card
-            .card-header-actions
-              .card-header
-                | Package description
-                a(href="#")
-                  i(data-feather='edit')
+          .input-group.input-group-joined
+            .input-group-prepend
+              span.input-group-text
+                i(data-feather='search')
+            input#inputScaffoldId.form-control(type='text', placeholder='search service by version...', aria-label='Search', value="v1.0.0")
+      div.mt-0.mb-4
 
-            .card-body.text-center
-              // HTML generated using hilite.me
-              div(style='background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;')
-                pre(style="margin: 0; line-height: 125%")
-                  <span style="color: #557799">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-                  <span style="color: #007700">&lt;project</span> <span style="color: #0000CC">xmlns=</span><span style="background-color: #fff0f0">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
-                  <span style="color: #0000CC">xmlns:xsi=</span><span style="background-color: #fff0f0">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-                  <span style="color: #0000CC">xsi:schemaLocation=</span><span style="background-color: #fff0f0">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color: #007700">&gt;</span>
-                  <span style="color: #007700">&lt;modelVersion&gt;</span>4.0.0<span style="color: #007700">&lt;/modelVersion&gt;</span>
+      .row
+        .card.mb-4
+          .card-header CI jobs result
+          .card-body
+            .table-responsive
+              table.table.table-borderless.mb-0
+                thead.border-bottom
+                  tr.small.text-uppercase.text-muted
+                    th(scope='col') Branch
+                    th.text-right(scope='col') start time
+                    th.text-right(scope='col') build lasts
+                    th.text-right(scope='col') Status
+                tbody
+                  // Invoice item 1
+                  tr.border-bottom
+                    td
+                      .font-weight-bold
+                        a(href="") Develop
+                    td.text-right.font-weight-bold 14.01.2020 10:40
+                    td.text-right.font-weight-bold 5 min
+                    td.text-right.font-weight-bold
+                      span.badge.badge-success build success
 
-                  <span style="color: #007700">&lt;groupId&gt;</span>com.auth.auth<span style="color: #007700">&lt;/groupId&gt;</span>
-                  <span style="color: #007700">&lt;artifactId&gt;</span>auth-java<span style="color: #007700">&lt;/artifactId&gt;</span>
-                  <span style="color: #007700">&lt;packaging&gt;</span>pom<span style="color: #007700">&lt;/packaging&gt;</span>
-                  <span style="color: #007700">&lt;version&gt;</span>1.0-SNAPSHOT<span style="color: #007700">&lt;/version&gt;</span>
-                  <span style="color: #007700">&lt;modules&gt;</span>
-                  <span style="color: #007700">&lt;module&gt;</span>main-module<span style="color: #007700">&lt;/module&gt;</span>
-                  <span style="color: #007700">&lt;module&gt;</span>oauth-interceptor<span style="color: #007700">&lt;/module&gt;</span>
-                  <span style="color: #007700">&lt;/modules&gt;</span>
-
-                  <span style="color: #007700">&lt;dependencies&gt;</span>
-                  <span style="color: #007700">&lt;dependency&gt;</span>
-                  <span style="color: #007700">&lt;groupId&gt;</span>com.google.guava<span style="color: #007700">&lt;/groupId&gt;</span>
-                  <span style="color: #007700">&lt;artifactId&gt;</span>guava<span style="color: #007700">&lt;/artifactId&gt;</span>
-                  <span style="color: #007700">&lt;version&gt;</span>LATEST<span style="color: #007700">&lt;/version&gt;</span>
-                  <span style="color: #007700">&lt;/dependency&gt;</span>
-
-                  <span style="color: #007700">&lt;dependency&gt;</span>
-                  <span style="color: #007700">&lt;groupId&gt;</span>com.test.lib<span style="color: #007700">&lt;/groupId&gt;</span>
-                  <span style="color: #007700">&lt;artifactId&gt;</span>test-lib<span style="color: #007700">&lt;/artifactId&gt;</span>
-                  <span style="color: #007700">&lt;version&gt;</span>LATEST<span style="color: #007700">&lt;/version&gt;</span>
-                  <span style="color: #007700">&lt;/dependency&gt;</span>
-
-                  <span style="color: #007700">&lt;dependency&gt;</span>
-                  <span style="color: #007700">&lt;groupId&gt;</span>org.springframework<span style="color: #007700">&lt;/groupId&gt;</span>
-                  <span style="color: #007700">&lt;artifactId&gt;</span>spring-jdbc<span style="color: #007700">&lt;/artifactId&gt;</span>
-                  <span style="color: #007700">&lt;version&gt;</span>5.3.3<span style="color: #007700">&lt;/version&gt;</span>
-                  <span style="color: #007700">&lt;/dependency&gt;</span>
-
-                  <span style="color: #007700">&lt;/dependencies&gt;</span>
-
-                  <span style="color: #007700">&lt;properties&gt;</span>
-                  <span style="color: #007700">&lt;maven.compiler.source&gt;</span>11<span style="color: #007700">&lt;/maven.compiler.source&gt;</span>
-                  <span style="color: #007700">&lt;maven.compiler.target&gt;</span>11<span style="color: #007700">&lt;/maven.compiler.target&gt;</span>
-                  <span style="color: #007700">&lt;/properties&gt;</span>
-
-
-                  <span style="color: #007700">&lt;/project&gt;</span>
-
-        .col-xl-8
-          // Account details card
-          .card.mb-4
-            .card-header Analyzer result
-            .card-body
-              .table-responsive
-                table.table.table-borderless.mb-0
-                  thead.border-bottom
-                    tr.small.text-uppercase.text-muted
-                      th(scope='col') Library
-                      th.text-right(scope='col') Actual Version
-                      th.text-right(scope='col') Latest Version
-                      th.text-right(scope='col') Status
-                  tbody
-                    // Invoice item 1
-                    tr.border-bottom
-                      td
-                        .font-weight-bold Guava
-                        .small.text-muted.d-none.d-md-block Guava is a set of core Java libraries from Google that includes new collection types (such as multimap and multiset)...
-                      td.text-right.font-weight-bold v29.1.1
-                      td.text-right.font-weight-bold v30.1
-                      td.text-right.font-weight-bold
-                        span.badge.badge-warning Not recent version
-
-                    tr.border-bottom
-                      td
-                        .font-weight-bold Test lib
-                        .small.text-muted.d-none.d-md-block some test unregistered library...
-                      td.text-right.font-weight-bold v1.0.1
-                      td.text-right.font-weight-bold -
-                      td.text-right.font-weight-bold
-                        span.badge.badge-danger unknown lib
-                    // Invoice item 3
-                    tr.border-bottom
-                      td
-                        .font-weight-bold Spring JDBC
-                        .small.text-muted.d-none.d-md-block Spring JDBC
-                      td.text-right.font-weight-bold v5.3.3
-                      td.text-right.font-weight-bold v5.3.3
-                      td.text-right.font-weight-bold
-                        span.badge.badge-success All Good
-                    // Invoice subtotal
-                    tr
-                      td.text-right.pb-0(colspan='3')
-                        .text-uppercase.small.font-weight-700.text-muted Warning:
-                      td.text-right.pb-0
-                        .h5.mb-0.font-weight-700.text-warning 1
-                    // Invoice tax column
-                    tr
-                      td.text-right.pb-0(colspan='3')
-                        .text-uppercase.small.font-weight-700.text-muted Alert:
-                      td.text-right.pb-0
-                        .h5.mb-0.font-weight-700.text-danger 1
-                    // Invoice total
-                    tr
-                      td.text-right.pb-0(colspan='3')
-                        .text-uppercase.small.font-weight-700.text-muted All good:
-                      td.text-right.pb-0
-                        .h5.mb-0.font-weight-700.text-green 1
+                  tr.border-bottom
+                    td
+                      .font-weight-bold
+                        a(href="") Stage
+                    td.text-right.font-weight-bold 14.01.2020 11:20
+                    td.text-right.font-weight-bold 5 min
+                    td.text-right.font-weight-bold
+                      span.badge.badge-danger build failed
+                  // Invoice item 3
+                  tr.border-bottom
+                    td
+                      .font-weight-bold
+                        a(href="") Prod
+                    td.text-right.font-weight-bold 14.01.2020 13:50
+                    td.text-right.font-weight-bold 7 min
+                    td.text-right.font-weight-bold
+                      span.badge.badge-success build success
+                  tr.border-bottom
+                    td
+                      .font-weight-bold
+                        a(href="") release/v1.0.0
+                    td.text-right.font-weight-bold 14.01.2020 12:50
+                    td.text-right.font-weight-bold 6 min
+                    td.text-right.font-weight-bold
+                      span.badge.badge-success build success
+                  // Invoice subtotal
+                  tr
+                    td.text-right.pb-0(colspan='3')
+                      .text-uppercase.small.font-weight-700.text-muted Failed:
+                    td.text-right.pb-0
+                      .h5.mb-0.font-weight-700.text-danger 1
+                  // Invoice total
+                  tr
+                    td.text-right.pb-0(colspan='3')
+                      .text-uppercase.small.font-weight-700.text-muted Success:
+                    td.text-right.pb-0
+                      .h5.mb-0.font-weight-700.text-success 3

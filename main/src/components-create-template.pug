@@ -33,14 +33,18 @@ block content
                 .wizard-step-text-name Step 2
                 .wizard-step-text-details Permissions
             // Wizard navigation item 3
-            a#wizard4-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
+            a#wizard3-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
               .wizard-step-icon 3
               .wizard-step-text
                 .wizard-step-text-name Step 3
                 .wizard-step-text-details Tags and description
+            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
+              .wizard-step-icon 4
+              .wizard-step-text
+                .wizard-step-text-name Step 4
+                .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
-            // Wizard tab pane item 1
             #wizard1.tab-pane.py-5.py-xl-10.fade.show.active(role='tabpanel' aria-labelledby='wizard1-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -71,7 +75,6 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light.disabled(type='button' disabled='') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 2
             #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -96,7 +99,6 @@ block content
                     .d-flex.justify-content-between
                       button.btn.btn-light(type='button') Previous
                       button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 4
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -118,6 +120,50 @@ block content
                       button.btn.btn-secondary.mr-2 Java
                         span.badge.badge-white.ml-2 x
 
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
+            #wizard4.tab-pane.py-5.py-xl-10.fade.show.active(role='tabpanel' aria-labelledby='wizard4-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 1
+                  h5.card-title Template information
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputComponentName') Template name
+                      input.form-control(type='text' placeholder='Enter your template name' value='my template', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputRepoName') Repository name
+                      input.form-control(type='text' placeholder='Enter repository name' value='my-template', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputStreamId') Stream
+                      input.form-control(type='text', placeholder='search stream by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      label.small.mb-1(for='inputProjectId') Project
+                      input.form-control(type='text', placeholder='search project by name...', aria-label='Search', disabled=true)
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 2
+                  h5.card-title Permissions
+                  form
+                    .form-group
+                      label.small.mb-1(for='inputUserIds') User
+                      input.form-control(type='text', placeholder='search user by name...', aria-label='Search', disabled=true)
+                    .form-group
+                      button.btn.btn-primary.mr-2 Adam Smith
+                      button.btn.btn-primary.mr-2 Peter Griffin
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 3
+                  h5.card-title Tags and description
+                  form
+                    .form-group
+                      label(for='inputComponentDescription') Description
+                      textarea.form-control(rows='3', disabled=true)
+                    .form-group
+                      button.btn.btn-secondary.mr-2 Java-spring
+                      button.btn.btn-secondary.mr-2 Java
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
