@@ -64,10 +64,16 @@ block content
                   form
                     .form-group
                       label.small.mb-1(for='inputComponentName') Service name
-                      input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service')
+                      .input-group.input-group-joined
+                        input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputRepoUrl') Repository url
-                      input#inputRepoUrl.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo')
+                      .input-group.input-group-joined
+                        input#inputRepoUrl.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputScaffoldId') Scaffold template
                       .input-group.input-group-joined
@@ -75,6 +81,8 @@ block content
                           span.input-group-text
                             i(data-feather='search')
                         input#inputScaffoldId.form-control(type='text', placeholder='search template by name...', aria-label='Search')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputStreamId') Stream
                       .input-group.input-group-joined
@@ -82,6 +90,8 @@ block content
                           span.input-group-text
                             i(data-feather='search')
                         input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputProjectId') Project
                       .input-group.input-group-joined
@@ -89,6 +99,8 @@ block content
                           span.input-group-text
                             i(data-feather='search')
                         input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     hr.my-4
                     .d-flex.justify-content-between
                       button.btn.btn-light.disabled(type='button' disabled='') Previous
@@ -101,13 +113,22 @@ block content
                   form
                     .form-group
                       label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu)
-                      input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128')
+                      .input-group.input-group-joined
+                        input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
-                      input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128')
+                      .input-group.input-group-joined
+                        input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
-                      input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128')
+                      .input-group.input-group-joined
+                        input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     hr.my-4
                     .d-flex.justify-content-between
                       button.btn.btn-light(type='button') Previous
@@ -126,6 +147,8 @@ block content
                           span.input-group-text
                             i(data-feather='search')
                         input#inputUserIds.form-control(type='text', placeholder='search user by name...', aria-label='Search')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                     .form-group
                       button.btn.btn-primary.mr-2 Adam Smith
                         span.badge.badge-white.ml-2 x
@@ -149,6 +172,8 @@ block content
                           span.input-group-text
                             i(data-feather='search')
                         input#inputCrossComponentDepId.form-control(type='text', placeholder='search component by name...', aria-label='Search')
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
 
                     .form-group
                       button.btn.btn-secondary.mr-2 Java-spring-service#v1.0
@@ -171,7 +196,9 @@ block content
                       label(for='inputComponentDescription') Description
                       textarea#inputComponentDescription.form-control(rows='3')
                     .form-group
-                      .input-group.mb-3
+                      .input-group.input-group-joined.mb-3
+                        span.input-group-text.addon.border-0
+                          i(data-feather='info')
                         input.form-control(type='text' placeholder="Tag")
                         .input-group-append
                           button#button-addon2.btn.btn-secondary(type='button') Add
