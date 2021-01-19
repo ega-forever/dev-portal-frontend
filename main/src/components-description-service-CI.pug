@@ -20,16 +20,6 @@ block content
         a.nav-link.active.ml-0(href='components-description-service-CI.html') CI
         a.nav-link(href='components-description-service-trail.html') Trail
       hr.mt-0.mb-4
-
-      .row
-        .col-xl-4
-          .input-group.input-group-joined
-            .input-group-prepend
-              span.input-group-text
-                i(data-feather='search')
-            input#inputScaffoldId.form-control(type='text', placeholder='search service by version...', aria-label='Search', value="v1.0.0")
-      div.mt-0.mb-4
-
       .row
         .card.mb-4
           .card-header CI jobs result
@@ -41,6 +31,8 @@ block content
                     th(scope='col') Branch
                     th.text-right(scope='col') start time
                     th.text-right(scope='col') build lasts
+                    th.text-right(scope='col') Commit
+                    th.text-right(scope='col') Contributor
                     th.text-right(scope='col') Status
                 tbody
                   // Invoice item 1
@@ -51,7 +43,10 @@ block content
                     td.text-right.font-weight-bold 14.01.2020 10:40
                     td.text-right.font-weight-bold 5 min
                     td.text-right.font-weight-bold
-                      span.badge.badge-success build success
+                      a(href="#") 7823d34b2
+                    td.text-right.font-weight-bold user@company.com
+                    td.text-right.font-weight-bold
+                      a(href="#").badge.badge-success build success
 
                   tr.border-bottom
                     td
@@ -60,7 +55,10 @@ block content
                     td.text-right.font-weight-bold 14.01.2020 11:20
                     td.text-right.font-weight-bold 5 min
                     td.text-right.font-weight-bold
-                      span.badge.badge-danger build failed
+                      a(href="#") 456c9a12
+                    td.text-right.font-weight-bold user2@company.com
+                    td.text-right.font-weight-bold
+                      a(href="#").badge.badge-danger build failed
                   // Invoice item 3
                   tr.border-bottom
                     td
@@ -69,24 +67,18 @@ block content
                     td.text-right.font-weight-bold 14.01.2020 13:50
                     td.text-right.font-weight-bold 7 min
                     td.text-right.font-weight-bold
-                      span.badge.badge-success build success
-                  tr.border-bottom
-                    td
-                      .font-weight-bold
-                        a(href="") release/v1.0.0
-                    td.text-right.font-weight-bold 14.01.2020 12:50
-                    td.text-right.font-weight-bold 6 min
+                      a(href="#") 797b433c
+                    td.text-right.font-weight-bold user2@company.com
                     td.text-right.font-weight-bold
-                      span.badge.badge-success build success
-                  // Invoice subtotal
+                      a(href="#").badge.badge-success build success
                   tr
-                    td.text-right.pb-0(colspan='3')
+                    td.text-right.pb-0(colspan='5')
                       .text-uppercase.small.font-weight-700.text-muted Failed:
                     td.text-right.pb-0
                       .h5.mb-0.font-weight-700.text-danger 1
                   // Invoice total
                   tr
-                    td.text-right.pb-0(colspan='3')
+                    td.text-right.pb-0(colspan='5')
                       .text-uppercase.small.font-weight-700.text-muted Success:
                     td.text-right.pb-0
-                      .h5.mb-0.font-weight-700.text-success 3
+                      .h5.mb-0.font-weight-700.text-success 2

@@ -10,7 +10,7 @@ block content
               h1.page-header-title
                 .page-header-icon
                   i(data-feather='info')
-                | Template info
+                | Library info
     // Main page content
     .container.mt-4
       .row
@@ -19,7 +19,7 @@ block content
           .card
             .card-header-actions
               .card-header
-                | Template description
+                | Library description
                 a(href="#")
                   i(data-feather='edit')
 
@@ -30,16 +30,15 @@ block content
         .col-xl-8
           // Account details card
           .card.mb-4
-            .card-header Template details
+            .card-header Library details
             .card-body
               form
                 .form-group
-                  label.small.mb-1 Template name
+                  label.small.mb-1 Library name
                   input.form-control(type='text' value='my service' disabled=true)
                 .form-group
                   label.small.mb-1 Repository url
                   input.form-control(type='text' value='git://my_repo' disabled=true)
-
                 .form-group
                   label.small.mb-1 Stream
                   input.form-control(type='text' value='core stream' disabled=true)
@@ -56,10 +55,10 @@ block content
                 hr.my-4
                 h5 Tags
                 .form-group
-                  button.btn.btn-secondary.mr-2 Spring
-                  button.btn.btn-secondary.mr-2 Java
+                  button.btn.btn-secondary.mr-2 lombok
+                  button.btn.btn-secondary.mr-2 Java-core
 
                 hr.my-4
                 .d-flex.justify-content-between
-                  a.btn.btn-primary(href='components-update-template.html') Update info
-                  button.btn.btn-danger(type='button') Unregister template
+                  a.btn.btn-primary(href='components-update-library.html') Update info
+                  button.btn.btn-danger(type='button') Unregister library
