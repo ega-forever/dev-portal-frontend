@@ -38,21 +38,15 @@ block content
               .wizard-step-text
                 .wizard-step-text-name Step 3
                 .wizard-step-text-details Permissions
-            // Wizard navigation item 4
-            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
+            a#wizard4-tab.nav-item.nav-link(href='#wizard5' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
               .wizard-step-icon 4
               .wizard-step-text
                 .wizard-step-text-name Step 4
-                .wizard-step-text-details Cross dependencies
+                .wizard-step-text-details Tags and description
             a#wizard5-tab.nav-item.nav-link(href='#wizard5' data-toggle='tab' role='tab' aria-controls='wizard5' aria-selected='true')
               .wizard-step-icon 5
               .wizard-step-text
                 .wizard-step-text-name Step 5
-                .wizard-step-text-details Tags and description
-            a#wizard6-tab.nav-item.nav-link(href='#wizard6' data-toggle='tab' role='tab' aria-controls='wizard6' aria-selected='true')
-              .wizard-step-icon 6
-              .wizard-step-text
-                .wizard-step-text-name Step 6
                 .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
@@ -61,229 +55,71 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Enter Service information
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputComponentName') Service name
-                      .input-group.input-group-joined
-                        input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputRepoUrl') Repository url
-                      .input-group.input-group-joined
-                        input#inputRepoUrl.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputScaffoldId') Scaffold template
-                      .input-group.input-group-joined
-                        .input-group-prepend
-                          span.input-group-text
-                            i(data-feather='search')
-                        input#inputScaffoldId.form-control(type='text', placeholder='search template by name...', aria-label='Search')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputStreamId') Stream
-                      .input-group.input-group-joined
-                        .input-group-prepend
-                          span.input-group-text
-                            i(data-feather='search')
-                        input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputProjectId') Project
-                      .input-group.input-group-joined
-                        .input-group-prepend
-                          span.input-group-text
-                            i(data-feather='search')
-                        input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light.disabled(type='button' disabled='') Previous
-                      button.btn.btn-primary(type='button') Next
+                  include components/options/service/service-settings-block-metainfo
+                  +settings_block_metainfo(false, false)
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light.disabled(type='button' disabled='') Previous
+                    button.btn.btn-primary(type='button') Next
             #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
                   h5.card-title Resources for service
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu)
-                      .input-group.input-group-joined
-                        input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
-                      .input-group.input-group-joined
-                        input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
-                      .input-group.input-group-joined
-                        input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light(type='button') Previous
-                      button.btn.btn-primary(type='button') Next
+                  include components/options/service/service-settings-block-resources
+                  +settings_block_resources(false)
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
 
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3
                   h5.card-title Edit permissions
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputUserIds') User
-                      .input-group.input-group-joined
-                        .input-group-prepend
-                          span.input-group-text
-                            i(data-feather='search')
-                        input#inputUserIds.form-control(type='text', placeholder='search user by name...', aria-label='Search')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                    .form-group
-                      button.btn.btn-primary.mr-2 Adam Smith
-                        span.badge.badge-white.ml-2 x
-                      button.btn.btn-primary.mr-2 Peter Griffin
-                        span.badge.badge-white.ml-2 x
-
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light(type='button') Previous
-                      button.btn.btn-primary(type='button') Next
+                  include components/options/common/common-settings-block-permissions
+                  +settings_block_persmissions(false)
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
             #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 4
-                  h5.card-title Cross dependencies
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputCrossComponentDepId') Cross dependency
-                      .input-group.input-group-joined
-                        .input-group-prepend
-                          span.input-group-text
-                            i(data-feather='search')
-                        input#inputCrossComponentDepId.form-control(type='text', placeholder='search component by name...', aria-label='Search')
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-
-                    .form-group
-                      button.btn.btn-secondary.mr-2 Java-spring-service#v1.0
-                        span.badge.badge-white.ml-2 x
-                      button.btn.btn-secondary.mr-2 Lombok#v2.0
-                        span.badge.badge-white.ml-2 x
-
-                  hr.my-4
-                  .d-flex.justify-content-between
-                    button.btn.btn-light(type='button') Previous
-                    button.btn.btn-primary(type='button') Next
-
-            #wizard5.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard5-tab')
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 5
                   h5.card-title Tags and description
-                  form
-                    .form-group
-                      label(for='inputComponentDescription') Description
-                      textarea#inputComponentDescription.form-control(rows='3')
-                    .form-group
-                      .input-group.input-group-joined.mb-3
-                        span.input-group-text.addon.border-0
-                          i(data-feather='info')
-                        input.form-control(type='text' placeholder="Tag")
-                        .input-group-append
-                          button#button-addon2.btn.btn-secondary(type='button') Add
-
-                    .form-group
-                      button.btn.btn-secondary.mr-2 Spring
-                        span.badge.badge-white.ml-2 x
-                      button.btn.btn-secondary.mr-2 Java
-                        span.badge.badge-white.ml-2 x
-
+                  include components/options/common/common-settings-block-description
+                  +settings_block_description(false)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
-            #wizard6.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard6-tab')
+            #wizard5.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard5-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Service information
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputComponentName') Service name
-                      input.form-control(type='text' placeholder='Enter your service name' value='my service' disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputRepoUrl') Repository url
-                      input.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo' disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputScaffoldId') Scaffold template
-                      input.form-control(type='text', placeholder='search template by name...', aria-label='Search', disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputStreamId') Stream
-                      input.form-control(type='text', placeholder='search stream by name...', aria-label='Search', disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputProjectId') Project
-                      input.form-control(type='text', placeholder='search project by name...', aria-label='Search', disabled=true)
+                  include components/options/service/service-settings-block-metainfo
+                  +settings_block_metainfo(true, false)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
                   h5.card-title Resources for service
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu)
-                      input.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128', disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
-                      input.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128', disabled=true)
-                    .form-group
-                      label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
-                      input.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128', disabled=true)
+                  include components/options/service/service-settings-block-resources
+                  +settings_block_resources(true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3
                   h5.card-title Permissions
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputUserIds') User
-                      input.form-control(type='text', placeholder='search user by name...', aria-label='Search', disabled=true)
-                    .form-group
-                      button.btn.btn-primary.mr-2 Adam Smith
-                      button.btn.btn-primary.mr-2 Peter Griffin
-
+                  include components/options/common/common-settings-block-permissions
+                  +settings_block_persmissions(true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 4
-                  h5.card-title Cross dependencies
-                  form
-                    .form-group
-                      label.small.mb-1(for='inputCrossComponentDepId') Cross dependency
-                      input.form-control(type='text', placeholder='search component by name...', aria-label='Search', disabled=true)
-                    .form-group
-                      button.btn.btn-secondary.mr-2 Java-spring-service#v1.0
-                      button.btn.btn-secondary.mr-2 Lombok#v2.0
-
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 5
                   h5.card-title Tags and description
-                  form
-                    .form-group
-                      label(for='inputComponentDescription') Description
-                      textarea.form-control(rows='3', disabled=true)
-                    .form-group
-                      button.btn.btn-secondary.mr-2 Spring
-                      button.btn.btn-secondary.mr-2 Java
-
+                  include components/options/common/common-settings-block-description
+                  +settings_block_description(true)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous

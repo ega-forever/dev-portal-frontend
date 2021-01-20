@@ -1,4 +1,4 @@
-mixin settings_block_metainfo(isDisabled)
+mixin settings_block_metainfo(isDisabled, isNewRepository)
     form
         .form-group
             label.small.mb-1(for='inputComponentName') Service name
@@ -7,13 +7,23 @@ mixin settings_block_metainfo(isDisabled)
                 if !isDisabled
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
-        .form-group
-            label.small.mb-1(for='inputRepoName') Repository name
-            .input-group.input-group-joined
-                input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-service' disabled=isDisabled)
-                if !isDisabled
-                    span.input-group-text.addon.border-0
-                        i(data-feather='info')
+        if isNewRepository
+            .form-group
+                label.small.mb-1(for='inputRepoName') Repository name
+                .input-group.input-group-joined
+                    input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-template' disabled=isDisabled)
+                    if !isDisabled
+                        span.input-group-text.addon.border-0
+                            i(data-feather='info')
+
+        else
+            .form-group
+                label.small.mb-1(for='inputRepoName') Repository url
+                .input-group.input-group-joined
+                    input#inputRepoName.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo' disabled=isDisabled)
+                    if !isDisabled
+                        span.input-group-text.addon.border-0
+                            i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputScaffoldId') Scaffold template
             .input-group.input-group-joined

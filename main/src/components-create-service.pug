@@ -56,8 +56,8 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Enter Service information
-                  include components/service/service-settings-block-metainfo
-                  +settings_block_metainfo(false)
+                  include components/options/service/service-settings-block-metainfo
+                  +settings_block_metainfo(false, true)
                     hr.my-4
                     .d-flex.justify-content-between
                       button.btn.btn-light.disabled(type='button' disabled='') Previous
@@ -68,7 +68,7 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
                   h5.card-title Resources for service
-                  include components/service/service-settings-block-resources
+                  include components/options/service/service-settings-block-resources
                   +settings_block_resources(false)
                     hr.my-4
                     .d-flex.justify-content-between
@@ -81,7 +81,7 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3
                   h5.card-title Edit permissions
-                  include components/common/common-settings-block-permissions
+                  include components/options/common/common-settings-block-permissions
                   +settings_block_persmissions(false)
                     hr.my-4
                     .d-flex.justify-content-between
@@ -92,9 +92,8 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 4
                   h5.card-title Tags and description
-                  form
-                    include components/common/common-settings-block-description
-                    +settings_block_description(false)
+                  include components/options/common/common-settings-block-description
+                  +settings_block_description(false)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
@@ -105,25 +104,25 @@ block content
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Service information
-                  include components/service/service-settings-block-metainfo
-                  +settings_block_metainfo(true)
+                  include components/options/service/service-settings-block-metainfo
+                  +settings_block_metainfo(true, true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
                   h5.card-title Resources for service
-                  include components/service/service-settings-block-resources
+                  include components/options/service/service-settings-block-resources
                   +settings_block_resources(true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3
                   h5.card-title Permissions
-                  include components/common/common-settings-block-permissions
+                  include components/options/common/common-settings-block-permissions
                   +settings_block_persmissions(true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 4
                   h5.card-title Tags and description
-                  include components/common/common-settings-block-description
+                  include components/options/common/common-settings-block-description
                   +settings_block_description(true)
                   hr.my-4
                   .d-flex.justify-content-between
