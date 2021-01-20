@@ -1,0 +1,41 @@
+mixin settings_block_resources(isDisabled)
+    form
+        .form-group
+            label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu millicores)
+            .input-group.input-group-joined
+                input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128', disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
+            .input-group.input-group-joined
+                input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
+            .input-group.input-group-joined
+                input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            a.btn.btn-primary(type="button" data-bs-toggle="collapse" data-bs-target="#wizard2-advanced-options" aria-expanded="false" aria-controls="wizard2-advanced-options") show/hide advanced section
+        #wizard2-advanced-options.form-group.collapse.show
+            .form-group
+                label.small.mb-1(for='namespace') Namespace in Openshift
+                .input-group.input-group-joined
+                    input#namespace.form-control(placeholder='Enter namespace name' disabled=isDisabled)
+                    if !isDisabled
+                        span.input-group-text.addon.border-0
+                            i(data-feather='info')
+            .form-group
+                label.small.mb-1(for='pipelineConfig') Pipeline config &nbsp
+                    if !isDisabled
+                        span.addon.border-0.padd
+                            i(data-feather='info')
+                .input-group
+                    textarea#pipelineConfig.form-control(placeholder='Enter pipeline config' disabled=isDisabled)
+

@@ -1,0 +1,18 @@
+mixin settings_block_description(isDisabled)
+    form
+        .form-group
+            label(for='inputComponentDescription') Description
+            textarea#inputComponentDescription.form-control(rows='3' disabled=isDisabled)
+        .form-group
+            .input-group.input-group-joined.mb-3
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+                input.form-control(type='text' placeholder="Tag" disabled=isDisabled)
+                .input-group-append
+                    button#button-addon2.btn.btn-secondary(type='button' disabled=isDisabled) Add
+        .form-group
+            button.btn.btn-secondary.mr-2 Spring
+                span.badge.badge-white.ml-2 x
+            button.btn.btn-secondary.mr-2 Java
+                span.badge.badge-white.ml-2 x

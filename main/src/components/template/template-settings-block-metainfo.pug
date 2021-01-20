@@ -1,0 +1,38 @@
+mixin template_block_metainfo(isDisabled)
+    form
+        .form-group
+            label.small.mb-1(for='inputComponentName') Template name
+            .input-group.input-group-joined
+                input#inputComponentName.form-control(type='text' placeholder='Enter your template name' value='my template' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            label.small.mb-1(for='inputRepoName') Repository name
+            .input-group.input-group-joined
+                input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-template' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            label.small.mb-1(for='inputStreamId') Stream
+            .input-group.input-group-joined
+                if !isDisabled
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='search')
+                input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+        .form-group
+            label.small.mb-1(for='inputProjectId') Project
+            .input-group.input-group-joined
+                if !isDisabled
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='search')
+                input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search' disabled=isDisabled)
+                if !isDisabled
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
