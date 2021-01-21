@@ -1,0 +1,56 @@
+extends ./components/layout
+
+block content
+  main
+    header.page-header.page-header-dark.bg-gradient-primary-to-secondary.mb-4
+      .container
+        .page-header-content.pt-4
+          .row.align-items-center.justify-content-between
+            .col-auto.mt-4
+              h1.page-header-title
+                .page-header-icon
+                  i(data-feather='life-buoy')
+                | Search component
+              .page-header-subtitle What are you looking for? Our search engine is here to help.
+          .page-header-search.mt-4
+            .input-group.input-group-joined
+              input.form-control(type='text' placeholder='Search...' aria-label='Search' autofocus='')
+              .input-group-append
+                span.input-group-text
+                  i(data-feather='search')
+    // Main page content
+    .container
+      h4.mb-0.mt-5 Found components
+      hr.mt-2.mb-4
+      .row
+        .col-lg-4.mb-4
+          // Knowledge base category card 1
+          a.card.lift.lift-sm.h-100(href='components-description-service.html')
+            .card-body
+              h5.card-title.text-primary.mb-2
+                i.mr-2(data-feather='cloud')
+                | Core auth
+              p.card-text.mb-1
+                | some info from readme.md
+            .card-footer
+              .small.text-muted Service
+        .col-lg-4.mb-4
+          // Knowledge base category card 2
+          a.card.lift.lift-sm.h-100(href='components-description-library.html')
+            .card-body
+              h5.card-title.text-yellow.mb-2
+                i.mr-2(data-feather='book')
+                | Lombok
+              p.card-text.mb-1 some info from readme.md
+            .card-footer
+              .small.text-muted Library
+        .col-lg-4.mb-4
+          // Knowledge base category card 3
+          a.card.lift.lift-sm.h-100(href='knowledge-base-category.html')
+            .card-body
+              h5.card-title.text-teal.mb-2
+                i.mr-2(data-feather='code')
+                | Java-sprint-rest-api
+              p.card-text.mb-1 some info from readme.md
+            .card-footer
+              .small.text-muted Template
