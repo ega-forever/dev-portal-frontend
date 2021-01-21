@@ -51,7 +51,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Enter Template information
                   include ./components/options/template/template-settings-block-metainfo
-                  +template_block_metainfo(false, true)
+                  +template_block_metainfo({}, true)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light.disabled(type='button' disabled='') Previous
@@ -84,7 +84,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Template information
                   include ./components/options/template/template-settings-block-metainfo
-                  +template_block_metainfo(true, true)
+                  +template_block_metainfo({name: true, repo: true, stream: true, project: true}, true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
