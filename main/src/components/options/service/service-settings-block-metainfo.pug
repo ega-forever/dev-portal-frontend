@@ -1,59 +1,58 @@
-mixin settings_block_metainfo(isDisabled, isNewRepository)
+mixin settings_block_metainfo(disabledFields, isNewRepository)
     form
         .form-group
             label.small.mb-1(for='inputComponentName') Service name
             .input-group.input-group-joined
-                input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service' disabled=isDisabled)
-                if !isDisabled
+                input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service' disabled=disabledFields.name)
+                if !disabledFields.name
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         if isNewRepository
             .form-group
                 label.small.mb-1(for='inputRepoName') Repository name
                 .input-group.input-group-joined
-                    input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-template' disabled=isDisabled)
-                    if !isDisabled
+                    input#inputRepoName.form-control(type='text' placeholder='Enter repository name' value='my-template' disabled=disabledFields.repo)
+                    if !disabledFields.repo
                         span.input-group-text.addon.border-0
                             i(data-feather='info')
-
         else
             .form-group
                 label.small.mb-1(for='inputRepoName') Repository url
                 .input-group.input-group-joined
-                    input#inputRepoName.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo' disabled=isDisabled)
-                    if !isDisabled
+                    input#inputRepoName.form-control(type='text' placeholder='Enter repository url (git://)' value='git://my_repo' disabled=disabledFields.repo)
+                    if !disabledFields.repo
                         span.input-group-text.addon.border-0
                             i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputScaffoldId') Scaffold template
             .input-group.input-group-joined
-                if !isDisabled
+                if !disabledFields.template
                     .input-group-prepend
                         span.input-group-text
                             i(data-feather='search')
-                input#inputScaffoldId.form-control(type='text' placeholder='search template by name...' aria-label='Search' disabled=isDisabled)
-                if !isDisabled
+                input#inputScaffoldId.form-control(type='text' placeholder='search template by name...' aria-label='Search' disabled=disabledFields.template)
+                if !disabledFields.template
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputStreamId') Stream
             .input-group.input-group-joined
-                if !isDisabled
+                if !disabledFields.stream
                     .input-group-prepend
                         span.input-group-text
                             i(data-feather='search')
-                input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search' disabled=isDisabled)
-                if !isDisabled
+                input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search' disabled=disabledFields.stream)
+                if !disabledFields.stream
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputProjectId') Project
             .input-group.input-group-joined
-                if !isDisabled
+                if !disabledFields.project
                     .input-group-prepend
                         span.input-group-text
                             i(data-feather='search')
-                input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search' disabled=isDisabled)
-                if !isDisabled
+                input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search' disabled=disabledFields.project)
+                if !disabledFields.project
                     span.input-group-text.addon.border-0
                         i(data-feather='info')

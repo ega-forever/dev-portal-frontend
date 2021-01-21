@@ -38,7 +38,7 @@ block content
               .wizard-step-text
                 .wizard-step-text-name Step 3
                 .wizard-step-text-details Permissions
-            a#wizard4-tab.nav-item.nav-link(href='#wizard5' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
+            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
               .wizard-step-icon 4
               .wizard-step-text
                 .wizard-step-text-name Step 4
@@ -56,7 +56,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Enter Service information
                   include components/options/service/service-settings-block-metainfo
-                  +settings_block_metainfo(false, false)
+                  +settings_block_metainfo({}, false)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light.disabled(type='button' disabled='') Previous
@@ -101,7 +101,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Service information
                   include components/options/service/service-settings-block-metainfo
-                  +settings_block_metainfo(true, false)
+                  +settings_block_metainfo({name: true, repo: true, template: true, stream: true, project: true}, false)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2

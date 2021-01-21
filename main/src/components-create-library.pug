@@ -51,11 +51,11 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Enter Library information
                   include ./components/options/library/library-settings-block-metainfo
-                  +library_block_metainfo(false)
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light.disabled(type='button' disabled='') Previous
-                      button.btn.btn-primary(type='button') Next
+                  +library_block_metainfo({}, true)
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light.disabled(type='button' disabled='') Previous
+                    button.btn.btn-primary(type='button') Next
             // Wizard tab pane item 3
             #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
               .row.justify-content-center
@@ -64,10 +64,10 @@ block content
                   h5.card-title Edit permissions
                   include ./components/options/common/common-settings-block-permissions
                   +settings_block_persmissions(false)
-                    hr.my-4
-                    .d-flex.justify-content-between
-                      button.btn.btn-light(type='button') Previous
-                      button.btn.btn-primary(type='button') Next
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
@@ -86,7 +86,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Library information
                   include ./components/options/library/library-settings-block-metainfo
-                  +library_block_metainfo(true)
+                  +library_block_metainfo({name: true, repo: true, template: true, stream: true, project: true}, true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
