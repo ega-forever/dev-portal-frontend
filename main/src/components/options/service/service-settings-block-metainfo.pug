@@ -1,4 +1,4 @@
-mixin settings_block_metainfo(disabledFields, isNewRepository)
+mixin settings_block_metainfo(disabledFields, isNewRepository, defaultValues)
     form
         .form-group
             label.small.mb-1(for='inputComponentName') Service name
@@ -30,7 +30,7 @@ mixin settings_block_metainfo(disabledFields, isNewRepository)
                     .input-group-prepend
                         span.input-group-text
                             i(data-feather='search')
-                input#inputScaffoldId.form-control(type='text' placeholder='search template by name...' aria-label='Search' disabled=disabledFields.template)
+                input#inputScaffoldId.form-control(type='text' placeholder='search template by name...' aria-label='Search' disabled=disabledFields.template value=defaultValues.scaffold)
                 if !disabledFields.template
                     span.input-group-text.addon.border-0
                         i(data-feather='info')

@@ -18,6 +18,16 @@ block content
       // Wizard card example with navigation
       .card
         .card-header.border-bottom
+          .step.step-lg
+            .step-item
+              a.step-item-link(href='#!') Auth Service
+            .step-item
+              a.step-item-link(href='#!') Billing Service
+            .step-item.active
+              a.step-item-link(href='#!') Notification Service
+            .step-item
+              a.step-item-link.disabled(href='#!', tabindex='-1', aria-disabled='true') DSO Service
+          hr.my-4
           // Wizard navigation
           #cardTab.nav.nav-pills.nav-justified.flex-column.flex-xl-row.nav-wizard(role='tablist')
             // Wizard navigation item 1
@@ -39,7 +49,7 @@ block content
                 .wizard-step-text-name Step 3
                 .wizard-step-text-details Permissions
             a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
-              .wizard-step-icon 5
+              .wizard-step-icon 4
               .wizard-step-text
                 .wizard-step-text-name Step 4
                 .wizard-step-text-details Tags and description
@@ -56,9 +66,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Enter Service information
                   include components/options/service/service-settings-block-metainfo
-                  +settings_block_metainfo({
-                    repo: true
-                  }, false, {})
+                  +settings_block_metainfo({}, false, {scaffold: "Notification-service-template"})
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light.disabled(type='button' disabled='') Previous
@@ -69,21 +77,22 @@ block content
                   h3.text-primary Step 2
                   h5.card-title Resources for service
                   include components/options/service/service-settings-block-resources
-                  +settings_block_resources(true)
+                  +settings_block_resources(false)
                   hr.my-4
                   .d-flex.justify-content-between
-                    button.btn.btn-light.disabled(type='button' disabled='') Previous
+                    button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
+
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3
                   h5.card-title Edit permissions
                   include components/options/common/common-settings-block-permissions
-                  +settings_block_persmissions(true)
+                  +settings_block_persmissions(false)
                   hr.my-4
                   .d-flex.justify-content-between
-                    button.btn.btn-light.disabled(type='button' disabled='') Previous
+                    button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
             #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
               .row.justify-content-center
@@ -91,7 +100,7 @@ block content
                   h3.text-primary Step 4
                   h5.card-title Tags and description
                   include components/options/common/common-settings-block-description
-                  +settings_block_description(true)
+                  +settings_block_description(false)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
@@ -102,13 +111,7 @@ block content
                   h3.text-primary Step 1
                   h5.card-title Service information
                   include components/options/service/service-settings-block-metainfo
-                  +settings_block_metainfo({
-                    name: true,
-                    repo: true,
-                    template: true,
-                    stream: true,
-                    project: true
-                  }, false, {})
+                  +settings_block_metainfo({name: true, repo: true, template: true, stream: true, project: true}, false, {scaffold: "Notification-service-template"})
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
