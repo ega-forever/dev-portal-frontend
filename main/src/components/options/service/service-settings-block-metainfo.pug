@@ -7,7 +7,30 @@ mixin settings_block_metainfo(disabledFields, isNewRepository, defaultValues)
                 if !disabledFields.name
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
+
+        .form-group
+            label.small.mb-1(for='inputNamespace') Namespace
+            .input-group.input-group-joined
+                if !disabledFields.namespace
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='info')
+                select#inputNamespace.form-control(disabled=disabledFields.namespace)
+                    option(selected=true) DSO
+
         if isNewRepository
+            .form-group
+                label.small.mb-1(for='inputRepoProject') Repository project
+                .input-group.input-group-joined
+                    if !disabledFields.repo
+                        .input-group-prepend
+                            span.input-group-text
+                                i(data-feather='search')
+                    input#inputRepoProject.form-control(type='text' placeholder='Enter project name' value='some_project' disabled=disabledFields.repo)
+                    if !disabledFields.repo
+                        span.input-group-text.addon.border-0
+                            i(data-feather='info')
+
             .form-group
                 label.small.mb-1(for='inputRepoName') Repository name
                 .input-group.input-group-joined
@@ -45,14 +68,27 @@ mixin settings_block_metainfo(disabledFields, isNewRepository, defaultValues)
                 if !disabledFields.stream
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
+
         .form-group
-            label.small.mb-1(for='inputProjectId') Project
+            label.small.mb-1(for='inputServiceType') Service Type
             .input-group.input-group-joined
-                if !disabledFields.project
+                if !disabledFields.servicetype
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='info')
+                select#inputServiceType.form-control(disabled=disabledFields.servicetype)
+                    option(selected=true) Common
+                    option Infrastructure
+                    option Service
+
+        .form-group
+            label.small.mb-1(for='inputSuboId') SUBO
+            .input-group.input-group-joined
+                if !disabledFields.subo
                     .input-group-prepend
                         span.input-group-text
                             i(data-feather='search')
-                input#inputProjectId.form-control(type='text', placeholder='search project by name...', aria-label='Search' disabled=disabledFields.project)
-                if !disabledFields.project
+                input#inputProjectId.form-control(type='text', placeholder='search SUBO by name...', aria-label='Search' disabled=disabledFields.subo)
+                if !disabledFields.subo
                     span.input-group-text.addon.border-0
                         i(data-feather='info')

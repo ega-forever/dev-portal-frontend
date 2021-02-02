@@ -26,22 +26,16 @@ block content
               .wizard-step-text
                 .wizard-step-text-name Step 1
                 .wizard-step-text-details Project name and namespace
-            // Wizard navigation item 2
+            // Wizard navigation item 3
             a#wizard2-tab.nav-item.nav-link(href='#wizard2' data-toggle='tab' role='tab' aria-controls='wizard2' aria-selected='true')
               .wizard-step-icon 2
               .wizard-step-text
                 .wizard-step-text-name Step 2
-                .wizard-step-text-details Permissions
-            // Wizard navigation item 3
+                .wizard-step-text-details Tags and description
             a#wizard3-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
               .wizard-step-icon 3
               .wizard-step-text
                 .wizard-step-text-name Step 3
-                .wizard-step-text-details Tags and description
-            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
-              .wizard-step-icon 4
-              .wizard-step-text
-                .wizard-step-text-name Step 4
                 .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
@@ -57,23 +51,11 @@ block content
                   .d-flex.justify-content-between
                     button.btn.btn-light.disabled(type='button' disabled='') Previous
                     button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 2
+            // Wizard tab pane item 4
             #wizard2.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard2-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 2
-                  h5.card-title Edit permissions
-                  include ./components/options/common/common-settings-block-permissions
-                  +settings_block_persmissions(false)
-                  hr.my-4
-                  .d-flex.justify-content-between
-                    button.btn.btn-light(type='button') Previous
-                    button.btn.btn-primary(type='button') Next
-            // Wizard tab pane item 4
-            #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 3
                   h5.card-title Tags and description
                   include ./components/options/common/common-settings-block-description
                   +settings_block_description(false)
@@ -81,19 +63,13 @@ block content
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
-            #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
+            #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Project name and namespace
                   include ./components/options/template/template-settings-block-metainfo
-                  +template_block_metainfo({name: true, repo: true, stream: true, project: true}, false)
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 2
-                  h5.card-title Permissions
-                  include ./components/options/common/common-settings-block-permissions
-                  +settings_block_persmissions(true)
+                  +template_block_metainfo({name: true, repo: true, stream: true, project: true, namespace: true}, false)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 3

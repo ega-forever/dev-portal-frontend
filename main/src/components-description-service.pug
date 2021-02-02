@@ -54,15 +54,21 @@ block content
                   label.small.mb-1 Service name
                   input.form-control(type='text' value='my service' disabled=true)
                 .form-group
+                  label.small.mb-1 Namespace
+                  input.form-control(type='text' value="DSO" disabled=true)
+                .form-group
                   label.small.mb-1 Repository url
                   input.form-control(type='text' value='git://my_repo' disabled=true)
-
                 .form-group
                   label.small.mb-1 Stream
                   input.form-control(type='text' value='core stream' disabled=true)
                 .form-group
-                  label.small.mb-1 Project
-                  input.form-control(type='text' value="billing project" disabled=true)
+                  label.small.mb-1 Service Type
+                  input.form-control(type='text' value="Common" disabled=true)
+                .form-group
+                  label.small.mb-1 SUBO
+                  input.form-control(type='text' value="https://some_subo_link.com" disabled=true)
+
 
                 hr.my-4
                 h5 Resources
@@ -76,12 +82,6 @@ block content
                   label.small.mb-1 Disk amount (mb)
                   input.form-control(type='number' value='128' disabled=true)
 
-
-                hr.my-4
-                h5 Edit Permission
-                .form-group
-                  button.btn.btn-primary.mr-2 Adam Smith
-                  button.btn.btn-primary.mr-2 Peter Griffin
 
                 hr.my-4
                 h5 Tags
