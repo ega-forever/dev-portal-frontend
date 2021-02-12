@@ -1,0 +1,135 @@
+extends ./components/layout
+
+block content
+    main
+        header.page-header.page-header-dark.bg-gradient-primary-to-secondary.pb-10
+            .container
+                .page-header-content.pt-4
+                    .row.align-items-center.justify-content-between
+                        .col-auto.mt-4
+                            h1.page-header-title
+                                | Components requests
+        // Main page content
+        .container.mt-n10
+            .card.card-header-actions.mb-4
+                .card-body
+                    .datatable
+                        table#dataTable.table.table-bordered.table-hover(width='100%' cellspacing='0')
+                            thead
+                                tr
+                                    th Name
+                                    th SUBO
+                                    th Requestor
+                                    th Actions
+                            tfoot
+                                tr
+                                    th Name
+                                    th SUBO
+                                    th Requestor
+                                    th Actions
+                            tbody
+                                tr
+                                    td Payroll service
+                                    td Billing
+                                    td Lois Griffin
+                                    td
+                                        .dropdown.no-caret
+                                            button#dropdownMenuButton1.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                                i.text-gray-500(data-feather='more-vertical')
+                                            .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='dropdownMenuButton1')
+                                                a.dropdown-item(href='components-request-details-service-plain.html')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='list')
+                                                    | Details
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='download')
+                                                    | Download
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='plus-circle')
+                                                    | Approve
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='minus-circle')
+                                                    | Decline
+
+                                tr
+                                    td Billing infrastructure (iServer)
+                                    td Billing
+                                    td Lois Griffin
+                                    td
+                                        .dropdown.no-caret
+                                            button#dropdownMenuButton2.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                                i.text-gray-500(data-feather='more-vertical')
+                                            .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='dropdownMenuButton2')
+                                                a.dropdown-item(href='components-request-details-service-iserver.html')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='list')
+                                                    | Details
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='download')
+                                                    | Download
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='plus-circle')
+                                                    | Approve
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='minus-circle')
+                                                    | Decline
+
+                                tr
+                                    td Interface library
+                                    td Core
+                                    td Peter Griffin
+                                    td
+                                        .dropdown.no-caret
+                                            button#dropdownMenuButton3.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                                i.text-gray-500(data-feather='more-vertical')
+                                            .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='dropdownMenuButton3')
+                                                a.dropdown-item(href='components-request-details-library.html')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='list')
+                                                    | Details
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='download')
+                                                    | Download
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='plus-circle')
+                                                    | Approve
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='minus-circle')
+                                                    | Decline
+
+                                tr
+                                    td Auth template
+                                    td Core
+                                    td Peter Griffin
+                                    td
+                                        .dropdown.no-caret
+                                            button#dropdownMenuButton4.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                                                i.text-gray-500(data-feather='more-vertical')
+                                            .dropdown-menu.dropdown-menu-right.animated--fade-in-up(aria-labelledby='dropdownMenuButton4')
+                                                a.dropdown-item(href='components-request-details-template.html')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='list')
+                                                    | Details
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='download')
+                                                    | Download
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='plus-circle')
+                                                    | Approve
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='minus-circle')
+                                                    | Decline
+
+

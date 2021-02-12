@@ -1,0 +1,34 @@
+extends ./components/layout
+
+block content
+    main
+        header.page-header.page-header-dark.bg-gradient-primary-to-secondary.pb-10
+            .container
+                .page-header-content.pt-4
+                    .row.align-items-center.justify-content-between
+                        .col-auto.mt-4
+                            h1.page-header-title
+                                .page-header-icon
+                                    i(data-feather='arrow-right-circle')
+                                | Template component
+                            .page-header-subtitle
+                                | Template creation request
+        .container.mt-n10
+            .card
+                .card-body
+                    .row.justify-content-center
+                        .col-xxl-6.col-xl-8
+                            h3.text-primary Step 1
+                            h5.card-title Template information
+                            include ./components/options/template/template-settings-block-metainfo
+                            +template_block_metainfo({}, true)
+                    .row.justify-content-center
+                        .col-xxl-6.col-xl-8
+                            h3.text-primary Step 2
+                            h5.card-title Tags and description
+                            include ./components/options/common/common-settings-block-description
+                            +settings_block_description(false)
+                            hr.my-4
+                            .d-flex.justify-content-between
+                                button.btn.btn-danger(type='button') Decline
+                                button.btn.btn-primary(type='button') Approve
