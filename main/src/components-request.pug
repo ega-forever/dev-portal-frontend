@@ -19,19 +19,22 @@ block content
                                 tr
                                     th Name
                                     th SUBO
-                                    th Requestor
+                                    th Requester
+                                    th Time left to response
                                     th Actions
                             tfoot
                                 tr
                                     th Name
                                     th SUBO
-                                    th Requestor
+                                    th Requester
+                                    th Time left to response
                                     th Actions
                             tbody
                                 tr
                                     td Payroll service
                                     td Billing
                                     td Lois Griffin
+                                    td.text-warning 1 hour
                                     td
                                         .dropdown.no-caret
                                             button#dropdownMenuButton1.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
@@ -45,6 +48,10 @@ block content
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='download')
                                                     | Download
+                                                a.dropdown-item.disabled(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='send')
+                                                    | Resend notification
                                                 a.dropdown-item(href='#!')
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='plus-circle')
@@ -58,6 +65,7 @@ block content
                                     td Billing infrastructure (iServer)
                                     td Billing
                                     td Lois Griffin
+                                    td.text-danger 0 hours
                                     td
                                         .dropdown.no-caret
                                             button#dropdownMenuButton2.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
@@ -73,6 +81,10 @@ block content
                                                     | Download
                                                 a.dropdown-item(href='#!')
                                                     .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='send')
+                                                    | Resend notification
+                                                a.dropdown-item(href='#!')
+                                                    .dropdown-item-icon
                                                         i.text-gray-500(data-feather='plus-circle')
                                                     | Approve
                                                 a.dropdown-item(href='#!')
@@ -84,6 +96,7 @@ block content
                                     td Interface library
                                     td Core
                                     td Peter Griffin
+                                    td.text-success 8 hours
                                     td
                                         .dropdown.no-caret
                                             button#dropdownMenuButton3.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
@@ -97,6 +110,10 @@ block content
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='download')
                                                     | Download
+                                                a.dropdown-item.disabled(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='send')
+                                                    | Resend notification
                                                 a.dropdown-item(href='#!')
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='plus-circle')
@@ -110,6 +127,7 @@ block content
                                     td Auth template
                                     td Core
                                     td Peter Griffin
+                                    td.text-success 6 hours
                                     td
                                         .dropdown.no-caret
                                             button#dropdownMenuButton4.btn.btn-transparent-dark.btn-icon.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
@@ -123,6 +141,10 @@ block content
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='download')
                                                     | Download
+                                                a.dropdown-item.disabled(href='#!')
+                                                    .dropdown-item-icon
+                                                        i.text-gray-500(data-feather='send')
+                                                    | Resend notification
                                                 a.dropdown-item(href='#!')
                                                     .dropdown-item-icon
                                                         i.text-gray-500(data-feather='plus-circle')

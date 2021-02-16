@@ -26,15 +26,20 @@ block content
               .wizard-step-text
                 .wizard-step-text-name Step 1
                 .wizard-step-text-details Project name and namespace
-            a#wizard3-tab.nav-item.nav-link(href='#wizard2' data-toggle='tab' role='tab' aria-controls='wizard2' aria-selected='true')
+            a#wizard2-tab.nav-item.nav-link(href='#wizard2' data-toggle='tab' role='tab' aria-controls='wizard2' aria-selected='true')
               .wizard-step-icon 2
               .wizard-step-text
                 .wizard-step-text-name Step 2
                 .wizard-step-text-details Tags and description
-            a#wizard4-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
+            a#wizard3-tab.nav-item.nav-link(href='#wizard3' data-toggle='tab' role='tab' aria-controls='wizard3' aria-selected='true')
               .wizard-step-icon 3
               .wizard-step-text
                 .wizard-step-text-name Step 3
+                .wizard-step-text-details Reviewer
+            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
+              .wizard-step-icon 4
+              .wizard-step-text
+                .wizard-step-text-name Step 4
                 .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
@@ -61,8 +66,19 @@ block content
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
                     button.btn.btn-primary(type='button') Next
-
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 3
+                  h5.card-title Reviewer
+                  include ./components/options/common/common-settings-block-reviewer
+                  +settings_block_reviewer(false)
+                  hr.my-4
+                  .d-flex.justify-content-between
+                    button.btn.btn-light(type='button') Previous
+                    button.btn.btn-primary(type='button') Next
+
+            #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
@@ -71,10 +87,16 @@ block content
                   +library_block_metainfo({name: true, repo: true, template: true, stream: true, project: true, namespace: true}, true)
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
-                  h3.text-primary Step 3
+                  h3.text-primary Step 2
                   h5.card-title Tags and description
                   include ./components/options/common/common-settings-block-description
                   +settings_block_description(true)
+              .row.justify-content-center
+                .col-xxl-6.col-xl-8
+                  h3.text-primary Step 3
+                  h5.card-title Reviewer
+                  include ./components/options/common/common-settings-block-reviewer
+                  +settings_block_reviewer(true)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous

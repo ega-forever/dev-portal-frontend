@@ -1,0 +1,12 @@
+mixin settings_block_reviewer(isDisabled)
+    form
+        .form-group
+            label.small.mb-1(for='inputReviewer') Reviewer
+            .input-group.input-group-joined
+                if !isDisabled
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='info')
+                select#inputNamespace.form-control(disabled=isDisabled)
+                    option(selected=true) Bart Simpson
+                    option(selected=true) Eric Cartman
