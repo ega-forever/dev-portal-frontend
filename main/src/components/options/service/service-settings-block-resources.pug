@@ -1,24 +1,32 @@
-mixin settings_block_resources(isDisabled)
+mixin settings_block_resources(disabledFields, hiddenFields)
     form
+        if !hiddenFields.service
+            .form-group
+                label.small.mb-1(for='service') Service type
+                select#service.form-control(disabled=disabledFields.service)
+                    option(selected=true) Backend
+                    option(selected=false) Frontend
+                    option(selected=false) Middleware
+
         .form-group
             label.small.mb-1(for='inputCpuUnits') CPU amount (vCpu millicores)
             .input-group.input-group-joined
-                input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128', disabled=isDisabled)
-                if !isDisabled
+                input#inputCpuUnits.form-control(type='number' placeholder='Enter vCPU units amount' value='128', min='128', max='1024', step='128', disabled=disabledFields.cpu)
+                if !disabledFields.cpu
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputMemoryAmount') Memory amount (mb)
             .input-group.input-group-joined
-                input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128' disabled=isDisabled)
-                if !isDisabled
+                input#inputMemoryAmount.form-control(type='number' placeholder='Enter memory amount' value='128', min='128', max='1024', step='128' disabled=disabledFields.memory)
+                if !disabledFields.memory
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         .form-group
             label.small.mb-1(for='inputDiskAmount') Disk amount (mb)
             .input-group.input-group-joined
-                input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128' disabled=isDisabled)
-                if !isDisabled
+                input#inputDiskAmount.form-control(type='number' placeholder='Enter disk amount' value='128', min='128', max='1024', step='128' disabled=disabledFields.disk)
+                if !disabledFields.disk
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
         .form-group
@@ -27,15 +35,15 @@ mixin settings_block_resources(isDisabled)
             .form-group
                 label.small.mb-1(for='namespace') Namespace in Openshift
                 .input-group.input-group-joined
-                    input#namespace.form-control(placeholder='Enter namespace name' disabled=isDisabled)
-                    if !isDisabled
+                    input#namespace.form-control(placeholder='Enter namespace name' disabled=disabledFields.namespace)
+                    if !disabledFields.namespace
                         span.input-group-text.addon.border-0
                             i(data-feather='info')
             .form-group
                 label.small.mb-1(for='pipelineConfig') Pipeline config &nbsp
-                    if !isDisabled
+                    if !disabledFields.pipeline
                         span.addon.border-0.padd
                             i(data-feather='info')
                 .input-group
-                    textarea#pipelineConfig.form-control(placeholder='Enter pipeline config' disabled=isDisabled)
+                    textarea#pipelineConfig.form-control(placeholder='Enter pipeline config' disabled=disabledFields.pipeline)
 

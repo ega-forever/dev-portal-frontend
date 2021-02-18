@@ -1,0 +1,52 @@
+extends ./components/layout
+
+block content
+    main
+        header.page-header.page-header-compact.page-header-light.border-bottom.bg-white.mb-4
+            .container-fluid
+                .page-header-content
+                    .row.align-items-center.justify-content-between.pt-3
+                        .col-auto.mb-3
+                            h1.page-header-title
+                                .page-header-icon
+                                    i(data-feather='settings')
+                                | SUBO settings
+        // Main page content
+        .container.mt-4
+            .row
+                .col-xl-4
+                    .form-group
+                        select#inputNamespace.form-control
+                            option(selected=true) Billing SUBO
+                            option(selected=false) Admin SUBO
+            div.mt-0.mb-4
+
+            nav.nav.nav-borders
+                a.nav-link(href='subo-settings.html') General
+                a.nav-link(href='subo-settings-backend.html') Backend
+                a.nav-link.active.ml-0(href='subo-settings-frontend.html') Frontend
+                a.nav-link(href='subo-settings-middleware.html') Middleware
+
+            hr.mt-0.mb-4
+
+            .row
+                .col-xl-8
+                    // Account details card
+                    .card.mb-4
+                        // .card-header Service details
+                        .card-body
+                            form
+                                h5 Resources
+                                include components/options/service/service-settings-block-resources
+                                +settings_block_resources({
+                                  service: false,
+                                  cpu: false,
+                                  memory: false,
+                                  disk: false,
+                                  namespace: false,
+                                  pipeline: false
+                                }, {service: true})
+
+                                hr.my-4
+                                .d-flex.justify-content-between
+                                    a.btn.btn-primary(href='#') Update info

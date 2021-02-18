@@ -42,7 +42,14 @@ block content
                             h3.text-primary Step 2
                             h5.card-title Resources for service
                             include components/options/service/service-settings-block-resources
-                            +settings_block_resources(false)
+                            +settings_block_resources({
+                              service: true,
+                              cpu: true,
+                              memory: true,
+                              disk: true,
+                              namespace: true,
+                              pipeline: true
+                            }, {})
                     .row.justify-content-center
                         .col-xxl-6.col-xl-8
                             h3.text-primary Step 3
