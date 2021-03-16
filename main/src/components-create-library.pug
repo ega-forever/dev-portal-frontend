@@ -35,11 +35,6 @@ block content
               .wizard-step-icon 3
               .wizard-step-text
                 .wizard-step-text-name Step 3
-                .wizard-step-text-details Reviewer
-            a#wizard4-tab.nav-item.nav-link(href='#wizard4' data-toggle='tab' role='tab' aria-controls='wizard4' aria-selected='true')
-              .wizard-step-icon 4
-              .wizard-step-text
-                .wizard-step-text-name Step 4
                 .wizard-step-text-details Summary
         .card-body
           #cardTabContent.tab-content
@@ -69,18 +64,6 @@ block content
             #wizard3.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard3-tab')
               .row.justify-content-center
                 .col-xxl-6.col-xl-8
-                  h3.text-primary Step 3
-                  h5.card-title Reviewer
-                  include ./components/options/common/common-settings-block-reviewer
-                  +settings_block_reviewer(false)
-                  hr.my-4
-                  .d-flex.justify-content-between
-                    button.btn.btn-light(type='button') Previous
-                    button.btn.btn-primary(type='button') Next
-
-            #wizard4.tab-pane.py-5.py-xl-10.fade(role='tabpanel' aria-labelledby='wizard4-tab')
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
                   h3.text-primary Step 1
                   h5.card-title Library information
                   include ./components/options/library/library-settings-block-metainfo
@@ -91,13 +74,9 @@ block content
                   h5.card-title Tags and description
                   include ./components/options/common/common-settings-block-description
                   +settings_block_description(true)
-              .row.justify-content-center
-                .col-xxl-6.col-xl-8
-                  h3.text-primary Step 3
-                  h5.card-title Reviewer
-                  include ./components/options/common/common-settings-block-reviewer
-                  +settings_block_reviewer(true)
                   hr.my-4
                   .d-flex.justify-content-between
                     button.btn.btn-light(type='button') Previous
-                    button.btn.btn-primary(type='button') Submit
+                    span
+                      button.btn.btn-secondary.mr-1(type='button') Download
+                      button.btn.btn-primary(type='button') Submit
