@@ -1,22 +1,37 @@
 mixin settings_block_metainfo(disabledFields, isNewRepository, defaultValues)
     form
         .form-group
+            label.small.mb-1(for='inputStreamId') Stream
+            .input-group.input-group-joined
+                if !disabledFields.stream
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='search')
+                input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search' disabled=disabledFields.stream)
+                if !disabledFields.stream
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+
+
+        .form-group
+            label.small.mb-1(for='inputSuboId') SUBO
+            .input-group.input-group-joined
+                if !disabledFields.subo
+                    .input-group-prepend
+                        span.input-group-text
+                            i(data-feather='search')
+                input#inputProjectId.form-control(type='text', placeholder='search SUBO by name...', aria-label='Search' disabled=disabledFields.subo)
+                if !disabledFields.subo
+                    span.input-group-text.addon.border-0
+                        i(data-feather='info')
+
+        .form-group
             label.small.mb-1(for='inputComponentName') Service name
             .input-group.input-group-joined
                 input#inputComponentName.form-control(type='text' placeholder='Enter your service name' value='my service' disabled=disabledFields.name)
                 if !disabledFields.name
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
-
-        .form-group
-            label.small.mb-1(for='inputNamespace') Namespace
-            .input-group.input-group-joined
-                if !disabledFields.namespace
-                    .input-group-prepend
-                        span.input-group-text
-                            i(data-feather='info')
-                select#inputNamespace.form-control(disabled=disabledFields.namespace)
-                    option(selected=true) DSO
 
         if isNewRepository
             .form-group
@@ -55,40 +70,5 @@ mixin settings_block_metainfo(disabledFields, isNewRepository, defaultValues)
                             i(data-feather='search')
                 input#inputScaffoldId.form-control(type='text' placeholder='search template by name...' aria-label='Search' disabled=disabledFields.template value=defaultValues.scaffold)
                 if !disabledFields.template
-                    span.input-group-text.addon.border-0
-                        i(data-feather='info')
-        .form-group
-            label.small.mb-1(for='inputStreamId') Stream
-            .input-group.input-group-joined
-                if !disabledFields.stream
-                    .input-group-prepend
-                        span.input-group-text
-                            i(data-feather='search')
-                input#inputStreamId.form-control(type='text', placeholder='search stream by name...', aria-label='Search' disabled=disabledFields.stream)
-                if !disabledFields.stream
-                    span.input-group-text.addon.border-0
-                        i(data-feather='info')
-
-        .form-group
-            label.small.mb-1(for='inputServiceType') Service Type
-            .input-group.input-group-joined
-                if !disabledFields.servicetype
-                    .input-group-prepend
-                        span.input-group-text
-                            i(data-feather='info')
-                select#inputServiceType.form-control(disabled=disabledFields.servicetype)
-                    option(selected=true) Common
-                    option Infrastructure
-                    option Service
-
-        .form-group
-            label.small.mb-1(for='inputSuboId') SUBO
-            .input-group.input-group-joined
-                if !disabledFields.subo
-                    .input-group-prepend
-                        span.input-group-text
-                            i(data-feather='search')
-                input#inputProjectId.form-control(type='text', placeholder='search SUBO by name...', aria-label='Search' disabled=disabledFields.subo)
-                if !disabledFields.subo
                     span.input-group-text.addon.border-0
                         i(data-feather='info')
